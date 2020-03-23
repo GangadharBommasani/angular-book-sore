@@ -1,0 +1,66 @@
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Add Book</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        formControlName="title"
+        placeholder="title"
+        name="title"
+        class="form-control"
+        id="title"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="category">category:</label>
+      <input
+        type="text"
+        formControlName="category"
+        placeholder="category"
+        name="category"
+        class="form-control"
+        id="category"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="year">year:</label>
+      <input
+        type="number"
+        formControlName="year"
+        placeholder="year"
+        name="year"
+        class="form-control"
+        id="year"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="price">price:</label>
+      <input
+        type="number"
+        formControlName="price"
+        placeholder="price"
+        name="price"
+        class="form-control"
+        id="price"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="author">author:</label>
+      <input
+        type="string"
+        formControlName="author"
+        placeholder="author"
+        name="author"
+        class="form-control"
+        id="author"
+      />
+    </div>
+
+    <button class="btn btn-success">Add</button>
+  </form>
+</div>

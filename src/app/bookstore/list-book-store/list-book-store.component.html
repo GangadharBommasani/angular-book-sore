@@ -1,0 +1,41 @@
+<div class="col-md-8 user-container">
+  <h2 style="margin: auto">Book Details</h2>
+  <button class="btn btn-success" style="width:100px" (click)="addBookStore()">
+    Add Book
+  </button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Year</th>
+        <th>price</th>
+        <th>Authors</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td class="hidden">{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.category }}</td>
+        <td>{{ book.year }}</td>
+        <td>{{ book.price }}</td>
+        <td>{{ book.authors[0] }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteBookStore(book)">
+            Delete
+          </button>
+          <button
+            class="btn btn-success"
+            (click)="editBookStore(book)"
+            style="margin-left: 20px;"
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
